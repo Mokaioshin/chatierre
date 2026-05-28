@@ -23,11 +23,13 @@ body {
 
 header {
   position: fixed;
-  top: 0; width: 100%;
+  top: 0;
+  width: 100%;
   z-index: 100;
   background: rgba(10,10,15,0.88);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(124,58,237,0.3);
+
   padding: 1.1rem 3rem;
 }
 
@@ -378,8 +380,8 @@ footer span { color: var(--violet-clair); }
 
 @media (max-width: 768px) {
 
-  header {
-    padding: 1rem 1.2rem;
+   header {
+    padding: 0.8rem 1rem;
   }
 
   nav ul {
