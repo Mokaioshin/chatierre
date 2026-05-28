@@ -7,25 +7,26 @@
   },
   {
     "nom": "Bluebell",
-    "image": "/images/Bluebell.jpg",
+    "image": "/images/bluebell.jpg",
     "statut": "Disponible",
     "sexe": "Femelle"
   },
   {
     "nom": "Brownie",
-    "image": "/images/Brownie.jpg",
+    "image": "/images/brownie.jpg",
     "statut": "Disponible",
     "sexe": "Femelle"
   },
   {
     "nom": "Berlioz",
-    "image": "/images/Berlioz.jpg",
+    "image": "/images/berlioz.jpg",
     "statut": "Disponible",
     "sexe": "Male"
   },
   {
     "nom": "Balthazar",
-    "image": "/images/Balthazar.jpg",
-    "statut": "Disponible"
+    "image": "/images/balthazar.jpg",
+    "statut": "Disponible",
+    "sexe": "Male"
   }
 ]
