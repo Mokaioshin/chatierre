@@ -1,0 +1,27 @@
+[
+  {
+    "nom": "Baghera",
+    "image": "Baghera.jpg",
+    "statut": "Disponible"
+  },
+  {
+    "nom": "Bluebell",
+    "image": "Bluebell.jpg",
+    "statut": "Réservé"
+  },
+    {
+        "nom": "Brownie",
+        "image": "Brownie.jpg",
+        "statut": "Disponible"
+    },
+    {
+        "nom": "Berlioz",
+        "image": "Berlioz.jpg",
+        "statut": "Réservé"
+    },
+    {
+        "nom": "Balthazar",
+        "image": "Balthazar.jpg",
+        "statut": "Disponible"
+    }
+]

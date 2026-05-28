@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "chatons"
+    label: "Chatons"
+    files:
+      - file: "content/chatons.json"
+        label: "Liste des chatons"
+        name: "chatons"
+        fields:
+          - { label: "Nom", name: "nom", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Statut", name: "statut", widget: "select", options: ["Disponible", "Réservé"] }

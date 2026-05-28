@@ -20,7 +20,6 @@
     </nav>
   </header>
 
- 
   <section id="presentation" class="hero">
     <div class="hero-emoji"></div>
     <h1> Au bonheur des pattoon's AVA</h1>
@@ -29,7 +28,6 @@
   </section>
 
   <div class="separateur"></div>
-
 
   <section id="parents">
     <div class="section-wrapper">
@@ -42,7 +40,6 @@
 
         <article class="card-parent">
           <div class="photo">
-           
             <img src="https://placehold.co/600x400/1a0a2e/c4b5fd?text=Aragon" alt="Aragon">
           </div>
           <div class="infos">
@@ -80,7 +77,6 @@
 
   <div class="separateur"></div>
 
- 
   <section id="chatons">
     <div class="section-wrapper">
       <div class="section-titre">
@@ -88,75 +84,12 @@
         <h2>Les <span>chatons</span></h2>
       </div>
 
-      <div class="grille-chatons">
-
-        <article class="card-chaton">
-          <div class="photo">
-            <img src="https://placehold.co/400x300/0a0a0f/7c3aed?text=Chaton+1" alt="Chaton 1">
-          </div>
-          <div class="infos">
-            <h3> Chaton 1</h3>
-            <span class="badge-dispo disponible">Disponible</span>
-          </div>
-        </article>
-
-        <article class="card-chaton">
-          <div class="photo">
-            <img src="https://placehold.co/400x300/0a0a0f/7c3aed?text=Chaton+2" alt="Chaton 2">
-          </div>
-          <div class="infos">
-            <h3> Chaton 2</h3>
-            <span class="badge-dispo disponible">Disponible</span>
-          </div>
-        </article>
-
-        <article class="card-chaton">
-          <div class="photo">
-            <img src="https://placehold.co/400x300/0a0a0f/7c3aed?text=Chaton+3" alt="Chaton 3">
-          </div>
-          <div class="infos">
-            <h3> Chaton 3</h3>
-            <span class="badge-dispo reserve">Réservé</span>
-          </div>
-        </article>
-
-        <article class="card-chaton">
-          <div class="photo">
-            <img src="https://placehold.co/400x300/0a0a0f/7c3aed?text=Chaton+4" alt="Chaton 4">
-          </div>
-          <div class="infos">
-            <h3>Chaton 4</h3>
-            <span class="badge-dispo disponible">Disponible</span>
-          </div>
-        </article>
-
-        <article class="card-chaton">
-          <div class="photo">
-            <img src="https://placehold.co/400x300/0a0a0f/7c3aed?text=Chaton+5" alt="Chaton 5">
-          </div>
-          <div class="infos">
-            <h3> Chaton 5</h3>
-            <span class="badge-dispo disponible">Disponible</span>
-          </div>
-        </article>
-
-        <article class="card-chaton">
-          <div class="photo">
-            <img src="https://placehold.co/400x300/0a0a0f/7c3aed?text=Chaton+6" alt="Chaton 6">
-          </div>
-          <div class="infos">
-            <h3> Chaton 6</h3>
-            <span class="badge-dispo reserve">Réservé</span>
-          </div>
-        </article>
-
-      </div>
+      <div class="grille-chatons" id="chatons-container"></div>
     </div>
   </section>
 
   <div class="separateur"></div>
 
-  
   <section id="contact">
     <div class="section-contact">
       <div class="section-titre">
@@ -164,13 +97,40 @@
         <h2>Nous <span>contacter</span></h2>
       </div>
       <p>Une question sur nos chatons, une réservation ? N'hésitez pas, nous vous répondrons avec plaisir.</p>
-      <a href="mailto:contact@chattiere-anais.fr" class="btn">Envoyer un message</a>
+      <a href="https://www.facebook.com/nessafitgirl" class="btn">Envoyer un message</a>
     </div>
   </section>
 
   <footer>
-    Fait avec <span>Coeur</span> par La Chattière d'Anaïs &nbsp;·&nbsp; <span>2025</span>
+    Fait avec <span>Coeur</span> Au bonheur des pattoon's AVA &nbsp;·&nbsp; <span>2025</span>
   </footer>
+
+  
+  <script>
+    fetch("content/chatons.json")
+      .then(res => res.json())
+      .then(data => {
+
+        const container = document.getElementById("chatons-container");
+
+        data.forEach(chaton => {
+          container.innerHTML += `
+            <article class="card-chaton">
+              <div class="photo">
+                <img src="${chaton.image}" alt="${chaton.nom}">
+              </div>
+              <div class="infos">
+                <h3>${chaton.nom}</h3>
+                <span class="badge-dispo ${chaton.statut === 'Disponible' ? 'disponible' : 'reserve'}">
+                  ${chaton.statut}
+                </span>
+              </div>
+            </article>
+          `;
+        });
+
+      });
+  </script>
 
 </body>
 </html>
