@@ -1,27 +1,31 @@
 [
   {
     "nom": "Baghera",
-    "image": "Baghera.jpg",
-    "statut": "Disponible"
+    "image": "/images/Baghera.jpg",
+    "statut": "Disponible",
+    "sexe": "Male"
   },
   {
     "nom": "Bluebell",
-    "image": "Bluebell.jpg",
-    "statut": "Réservé"
+    "image": "/images/Bluebell.jpg",
+    "statut": "Disponible",
+    "sexe": "Femelle"
   },
-    {
-        "nom": "Brownie",
-        "image": "Brownie.jpg",
-        "statut": "Disponible"
-    },
-    {
-        "nom": "Berlioz",
-        "image": "Berlioz.jpg",
-        "statut": "Réservé"
-    },
-    {
-        "nom": "Balthazar",
-        "image": "Balthazar.jpg",
-        "statut": "Disponible"
-    }
+  {
+    "nom": "Brownie",
+    "image": "/images/Brownie.jpg",
+    "statut": "Disponible",
+    "sexe": "Femelle"
+  },
+  {
+    "nom": "Berlioz",
+    "image": "/images/Berlioz.jpg",
+    "statut": "Disponible",
+    "sexe": "Male"
+  },
+  {
+    "nom": "Balthazar",
+    "image": "/images/Balthazar.jpg",
+    "statut": "Disponible"
+  }
 ]
