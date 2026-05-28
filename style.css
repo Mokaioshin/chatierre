@@ -375,13 +375,23 @@ footer {
 
 footer span { color: var(--violet-clair); }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  header { padding: 1rem 1.2rem; }
-  nav ul { gap: 1.2rem; }
-  .grille-chatons { grid-template-columns: repeat(2, 1fr); }
-   .grille-parents {
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 1rem 1.2rem;
+  }
+
+  nav ul {
+    gap: 1.2rem;
+  }
+
+  .grille-chatons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grille-parents {
     grid-template-columns: 1fr;
   }
-}
 
+}
