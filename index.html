@@ -4,9 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Au bonheur des pattounes AVA</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Crimson+Pro:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header>
@@ -22,9 +24,9 @@
 
   <section id="presentation" class="hero">
     <div class="hero-emoji"></div>
-    <h1> Au bonheur des pattoon's AVA</h1>
+    <h1>Au bonheur des pattounes AVA</h1>
     <p>Un élevage passionné où chaque chaton est unique, élevé avec amour au cœur de la famille.</p>
-    <div class="hero-badge">✦ Élevage familial &nbsp;·&nbsp; Chatons de qualité ✦</div>
+    <div class="hero-badge">✦ Élevage familial · Chatons de qualité ✦</div>
   </section>
 
   <div class="separateur"></div>
@@ -43,9 +45,9 @@
             <img src="https://placehold.co/600x400/1a0a2e/c4b5fd?text=Aragon" alt="Aragon">
           </div>
           <div class="infos">
-            <span class="badge-role"> Mâle reproducteur</span>
+            <span class="badge-role">Mâle reproducteur</span>
             <h3>Aragon</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus laudantium numquam officiis perferendis impedit voluptas accusamus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
         </article>
 
@@ -54,9 +56,9 @@
             <img src="https://placehold.co/600x400/1a0a2e/c4b5fd?text=Vutopie" alt="Vutopie">
           </div>
           <div class="infos">
-            <span class="badge-role"> Femelle reproductrice</span>
+            <span class="badge-role">Femelle reproductrice</span>
             <h3>Vutopie</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus laudantium numquam officiis perferendis impedit voluptas accusamus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
         </article>
 
@@ -65,9 +67,9 @@
             <img src="https://placehold.co/600x400/1a0a2e/c4b5fd?text=Asya" alt="Asya">
           </div>
           <div class="infos">
-            <span class="badge-role"> Femelle reproductrice</span>
+            <span class="badge-role">Femelle reproductrice</span>
             <h3>Asya</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque! Doloribus, quisquam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
         </article>
 
@@ -85,6 +87,7 @@
       </div>
 
       <div class="grille-chatons" id="chatons-container"></div>
+
     </div>
   </section>
 
@@ -96,32 +99,49 @@
         <span class="eyebrow">Nous écrire</span>
         <h2>Nous <span>contacter</span></h2>
       </div>
-      <p>Une question sur nos chatons, une réservation ? N'hésitez pas, nous vous répondrons avec plaisir.</p>
-      <a href="https://www.facebook.com/nessafitgirl" class="btn">Envoyer un message</a>
+
+      <p>Une question sur nos chatons ? N'hésitez pas.</p>
+
+      <a href="https://www.facebook.com/nessafitgirl" class="btn">
+        Envoyer un message
+      </a>
     </div>
   </section>
 
   <footer>
-    Fait avec <span>Coeur</span> Au bonheur des pattoon's AVA &nbsp;·&nbsp; <span>2025</span>
+    Fait avec <span>Coeur</span> Au bonheur des pattounes AVA · <span>2025</span>
   </footer>
 
-  
+  <!-- ✅ FIX IMPORTANT FETCH GITHUB PAGES -->
   <script>
-    fetch("content/chatons.json")
-      .then(res => res.json())
+    fetch("./content/chatons.json")
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("Erreur HTTP : " + res.status);
+        }
+        return res.json();
+      })
       .then(data => {
+
+        console.log("JSON OK :", data);
 
         const container = document.getElementById("chatons-container");
 
         data.forEach(chaton => {
+
           container.innerHTML += `
             <article class="card-chaton">
               <div class="photo">
                 <img src="${chaton.image}" alt="${chaton.nom}">
               </div>
+
               <div class="infos">
                 <h3>${chaton.nom}</h3>
-                <p class="genre">${chaton.sexe}</p>
+
+                <p class="genre">
+                  ${chaton.sexe ? chaton.sexe : "Inconnu"}
+                </p>
+
                 <span class="badge-dispo ${chaton.statut === 'Disponible' ? 'disponible' : 'reserve'}">
                   ${chaton.statut}
                 </span>
@@ -130,6 +150,9 @@
           `;
         });
 
+      })
+      .catch(err => {
+        console.error("FETCH ERROR :", err);
       });
   </script>
 
