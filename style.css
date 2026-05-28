@@ -17,6 +17,7 @@ body {
   font-family: 'Crimson Pro', serif;
   font-size: 18px;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 
@@ -379,4 +380,8 @@ footer span { color: var(--violet-clair); }
   header { padding: 1rem 1.2rem; }
   nav ul { gap: 1.2rem; }
   .grille-chatons { grid-template-columns: repeat(2, 1fr); }
+   .grille-parents {
+    grid-template-columns: 1fr;
+  }
 }
+
