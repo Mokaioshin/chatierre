@@ -1,31 +1,31 @@
 [
   {
     "nom": "Baghera",
-    "image": "/images/baghera.jpg",
+    "image": "images/baghera.jpg",
     "statut": "Disponible",
     "sexe": "Male"
   },
   {
     "nom": "Bluebell",
-    "image": "/images/bluebell.jpg",
+    "image": "images/bluebell.jpg",
     "statut": "Disponible",
     "sexe": "Femelle"
   },
   {
     "nom": "Brownie",
-    "image": "/images/brownie.jpg",
+    "image": "images/brownie.jpg",
     "statut": "Disponible",
     "sexe": "Femelle"
   },
   {
     "nom": "Berlioz",
-    "image": "/images/berlioz.jpg",
+    "image": "images/berlioz.jpg",
     "statut": "Disponible",
     "sexe": "Male"
   },
   {
     "nom": "Balthazar",
-    "image": "/images/balthazar.jpg",
+    "image": "images/balthazar.jpg",
     "statut": "Disponible",
     "sexe": "Male"
   }
