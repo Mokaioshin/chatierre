@@ -1,10 +1,5 @@
 [
-  {
-    "nom": "Baghera",
-    "image": "images/baghera.jpg",
-    "statut": "Disponible",
-    "sexe": "Male"
-  },
+  
   {
     "nom": "Bluebell",
     "image": "images/bluebell.jpg",
@@ -17,15 +12,22 @@
     "statut": "Disponible",
     "sexe": "Femelle"
   },
+  
   {
-    "nom": "Berlioz",
-    "image": "images/berlioz.jpg",
+    "nom": "Balthazar",
+    "image": "images/baltha.jpg",
     "statut": "Disponible",
     "sexe": "Male"
   },
   {
-    "nom": "Balthazar",
-    "image": "images/balthazar.jpg",
+    "nom": "Bounty",
+    "image": "images/bounty.jpg",
+    "statut": "Disponible",
+    "sexe": "Male"
+  },
+  {
+    "nom": "Boston",
+    "image": "images/bos.jpg",
     "statut": "Disponible",
     "sexe": "Male"
   }
