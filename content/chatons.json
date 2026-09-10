@@ -4,31 +4,36 @@
     "nom": "Bluebell",
     "image": "images/bluebell.jpg",
     "statut": "Disponible",
-    "sexe": "Femelle"
+    "sexe": "Femelle",
+    "datedenaissance" : "29/03/2026"
   },
   {
     "nom": "Brownie",
     "image": "images/brownie.jpg",
     "statut": "Disponible",
-    "sexe": "Femelle"
+    "sexe": "Femelle",
+    "datedenaissance" : "29/03/2026"
   },
   
   {
     "nom": "Balthazar",
     "image": "images/baltha.jpg",
     "statut": "Disponible",
-    "sexe": "Male"
+    "sexe": "Male",
+    "datedenaissance" : "29/03/2026"
   },
   {
     "nom": "Bounty",
     "image": "images/bounty.jpg",
     "statut": "Disponible",
-    "sexe": "Male"
+    "sexe": "Male",
+    "datedenaissance" : "28/05/2026"
   },
   {
     "nom": "Boston",
     "image": "images/bos.jpg",
     "statut": "Disponible",
-    "sexe": "Male"
+    "sexe": "Male",
+    "datedenaissance" : "28/05/2026"
   }
 ]

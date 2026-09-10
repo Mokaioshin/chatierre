@@ -262,15 +262,15 @@ nav a:hover::after { width: 100%; }
 /* GRILLE CHATONS */
 .grille-chatons {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
 }
 
 /* CARD CHATON */
 .card-chaton {
   background: rgba(26,10,46,0.5);
   border: 1px solid rgba(74,63,107,0.45);
-  border-radius: 1.2rem;
+  border-radius: 1.5rem;
   overflow: hidden;
   transition: transform 0.35s, border-color 0.35s, box-shadow 0.35s;
 }
@@ -283,12 +283,13 @@ nav a:hover::after { width: 100%; }
 
 .card-chaton .photo {
   width: 100%;
-  height: 180px;
+  height: 300px;
   overflow: hidden;
 }
 
 .card-chaton .photo img {
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.5s, filter 0.5s;
   filter: saturate(0.75) brightness(0.9);
@@ -300,14 +301,25 @@ nav a:hover::after { width: 100%; }
 }
 
 .card-chaton .infos {
-  padding: 1rem 1.2rem 1.4rem;
+  padding: 1.5rem 1.6rem 1.8rem;
 }
 
 .card-chaton h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.15rem;
+  font-size: 1.6rem;
   color: var(--blanc);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.card-chaton .genre {
+  color: rgba(196,181,253,0.72);
+  font-size: 1rem;
+}
+
+.card-chaton .date-naissance {
+  color: rgba(196,181,253,0.72);
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .badge-dispo {
@@ -380,20 +392,116 @@ footer span { color: var(--violet-clair); }
 
 @media (max-width: 768px) {
 
-   header {
+  /* HEADER */
+  header {
     padding: 0.8rem 1rem;
   }
 
   nav ul {
-    gap: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.2rem;
   }
 
-  .grille-chatons {
-    grid-template-columns: repeat(2, 1fr);
+  nav a {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
   }
 
+
+  /* HERO */
+  .hero {
+    min-height: 100svh;
+    padding: 7rem 1.2rem 3rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.3rem, 11vw, 4rem);
+  }
+
+  .hero p {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: 0.45rem 1rem;
+  }
+
+
+  /* SECTIONS */
+  .section-wrapper {
+    padding: 4rem 1.2rem;
+  }
+
+  .section-titre {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-titre h2 {
+    font-size: 2.2rem;
+  }
+
+
+  /* PARENTS */
   .grille-parents {
     grid-template-columns: 1fr;
+    gap: 1.8rem;
   }
 
+  .card-parent .photo {
+    height: 280px;
+  }
+
+  .card-parent .infos {
+    padding: 1.4rem 1.5rem 1.7rem;
+  }
+
+
+  /* CHATONS */
+  .grille-chatons {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .card-chaton {
+    width: 100%;
+  }
+
+  .card-chaton .photo {
+    height: 300px;
+  }
+
+  .card-chaton .infos {
+    padding: 1.4rem 1.5rem 1.7rem;
+  }
+
+  .card-chaton h3 {
+    font-size: 1.5rem;
+  }
+
+
+  /* CONTACT */
+  .section-contact {
+    padding: 4rem 1.2rem 6rem;
+  }
+
+  .section-contact p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.85rem 1.5rem;
+  }
+
+
+  /* FOOTER */
+  footer {
+    padding: 1.5rem 1rem;
+    font-size: 0.8rem;
+  }
 }
