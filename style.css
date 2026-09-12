@@ -154,6 +154,27 @@ nav a:hover::after { width: 100%; }
 
 .section-titre h2 span { color: var(--violet-clair); }
 
+.titre-parents {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.titre-parents h2 {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.image-titre {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  flex-shrink: 0;
+}
 
 .grille-parents {
   display: grid;
@@ -446,6 +467,16 @@ footer span { color: var(--violet-clair); }
 
 
   /* PARENTS */
+
+    .titre-parents {
+    gap: 0.8rem;
+  }
+
+  .image-titre {
+    width: 65px;
+    height: 65px;
+  
+}
   .grille-parents {
     grid-template-columns: 1fr;
     gap: 1.8rem;
