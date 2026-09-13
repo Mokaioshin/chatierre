@@ -83,6 +83,7 @@ nav a:hover::after { width: 100%; }
   animation: float 3s ease-in-out infinite;
 }
 
+
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(-10px); }
@@ -117,7 +118,55 @@ nav a:hover::after { width: 100%; }
   color: var(--violet-pale);
   letter-spacing: 0.08em;
 }
+.photo img {
+  cursor: zoom-in;
+}
 
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem;
+  background: rgba(5, 3, 10, 0.92);
+  backdrop-filter: blur(8px);
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 95vw;
+  max-height: 90vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 0.8rem;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.7);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+
+  background: none;
+  border: none;
+
+  color: var(--blanc);
+  font-size: 3rem;
+  cursor: pointer;
+
+  z-index: 1001;
+}
 
 .separateur {
   width: 100%;
