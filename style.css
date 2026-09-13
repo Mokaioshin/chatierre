@@ -329,7 +329,7 @@ nav a:hover::after { width: 100%; }
   font-weight: 300;
 }
 
-/* GRILLE CHATONS */
+
 .grille-chatons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -462,7 +462,7 @@ footer span { color: var(--violet-clair); }
 
 @media (max-width: 768px) {
 
-  /* HEADER */
+  
   header {
     padding: 0.8rem 1rem;
   }
@@ -479,7 +479,7 @@ footer span { color: var(--violet-clair); }
   }
 
 
-  /* HERO */
+  
   .hero {
     min-height: 100svh;
     padding: 7rem 1.2rem 3rem;
@@ -501,7 +501,7 @@ footer span { color: var(--violet-clair); }
   }
 
 
-  /* SECTIONS */
+  
   .section-wrapper {
     padding: 4rem 1.2rem;
   }
@@ -515,8 +515,7 @@ footer span { color: var(--violet-clair); }
   }
 
 
-  /* PARENTS */
-
+  
     .titre-parents {
     gap: 0.8rem;
   }
@@ -563,7 +562,7 @@ footer span { color: var(--violet-clair); }
   }
 
 
-  /* CONTACT */
+ 
   .section-contact {
     padding: 4rem 1.2rem 6rem;
   }
@@ -579,9 +578,52 @@ footer span { color: var(--violet-clair); }
   }
 
 
-  /* FOOTER */
+  
   footer {
     padding: 1.5rem 1rem;
     font-size: 0.8rem;
   }
 }
+
+ .lightbox {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    padding: 0;
+
+    background: #000;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lightbox.active {
+    display: flex;
+  }
+
+  .lightbox img {
+    width: 100vw;
+    height: 100dvh;
+
+    max-width: none;
+    max-height: none;
+
+    object-fit: contain;
+
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .lightbox-close {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+
+    font-size: 3rem;
+    color: white;
+
+    z-index: 1002;
+  }

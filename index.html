@@ -128,10 +128,7 @@
   <img id="lightbox-img" src="" alt="">
 </div>
   <script>
-  /* =========================
-     LIGHTBOX
-  ========================= */
-
+  
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const closeLightbox = document.querySelector(".lightbox-close");
@@ -140,7 +137,7 @@
 
     const image = event.target.closest(".photo img");
 
-    // OUVRIR
+    
     if (image) {
       lightboxImg.src = image.src;
       lightboxImg.alt = image.alt;
@@ -149,7 +146,7 @@
       document.body.style.overflow = "hidden";
     }
 
-    // FERMER
+    
     if (
       event.target === lightbox ||
       event.target === closeLightbox
@@ -159,7 +156,6 @@
     }
   });
 
-  // FERMER AVEC ÉCHAP
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       lightbox.classList.remove("active");
@@ -168,9 +164,7 @@
   });
 
 
-  /* =========================
-     CHARGEMENT DES CHATONS
-  ========================= */
+
 
   fetch("./content/chatons.json")
     .then(res => {
